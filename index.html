@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Bad Luck Bingo | Riichi Mahjong</title>
+    <title>Riichi Bingo</title>
     <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet">
     <style>
         :root {
@@ -657,10 +657,10 @@
         <header>
             <div class="header-left">
                 <div class="header-content">
-                    <h1>Bad Luck Bingo</h1>
+                    <h1>Riichi Bingo</h1>
                     <span class="badge">Riichi</span>
                 </div>
-                <p class="subtitle">Track your mahjong misfortunes</p>
+                <p class="subtitle">The only way to win is to not play.</p>
             </div>
             <button class="theme-toggle" onclick="toggleTheme()" title="Toggle theme">
                 <svg class="sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
@@ -755,13 +755,9 @@
             </div>
             <div class="bingo-board" id="bingo-board"></div>
             <div class="bingo-alert" id="bingo-alert">
-                🎉 BINGO! Maximum misfortune achieved!
+                🎉 BINGO!
             </div>
         </div>
-
-        <footer>
-            <p>May your tiles be ever unfortunate 🀄</p>
-        </footer>
     </div>
 
     <!-- Error Modal -->
@@ -780,46 +776,44 @@
         // SUGGESTED TILES - Modify this array to change defaults
         // ============================================
         const SUGGESTED_TILES = [
-            "Dealt into riichi ippatsu",
-            "Ron'd on your discard after riichi",
+            "Deal in while in riichi",
             "Dora 3+ in haipai, no tenpai",
-            "Called riichi, someone else wins",
-            "Dealer mangan+ dealt into",
-            "Yakuman tenpai, couldn't win",
-            "Drew all 4 of a tile you discarded",
-            "Furiten by accident",
-            "Won 1000 pts, lost 8000 next hand",
-            "Chased riichi, dealt in immediately",
+            "Opponent gets takame",
+            "Ankou in discards",
+            "Furiten on atozuke",
             "1-shanten for 10+ turns",
-            "Ippatsu'd after calling",
-            "Drew your winning tile after folding",
-            "Kan'd, rinshan for opponent",
-            "Haitei stolen",
-            "Ura dora flips, none for you",
+            "No ura on a pinfu hand",
             "Opponent tsumo'd on last tile",
-            "Had yakuman wait, drew wrong tile",
-            "Riichi, deal in same turn",
-            "Toimen riichi, you're dealer",
             "Lost lead on South 4",
-            "Pinfu only hand wins",
-            "Dealer repeats 5+ times (not you)",
-            "Double riichi against you",
-            "Chombo'd",
-            "Last place with 2nd place tenpai",
-            "Called, realized mistake too late",
-            "Needed 1 tile, it was all dead",
-            "Sanma: everyone tenpai but you",
-            "Riichi bet lost to tsumo",
-            "Aka dora in someone else's hand",
-            "Only safe tiles left = winning tiles",
-            "Karaten (empty tenpai)",
-            "Suji trap dealt into",
-            "Genbutsu becomes dangerous",
-            "9+ different terminals, no kyuushu",
-            "Mangan+ hand, won with 1 han",
-            "Fed oya consecutive wins",
-            "Nagashi mangan ruined last discard",
-            "Riichi'd, drew all safe tiles"
+            "Terrible dama",
+            "4+ renchans",
+            "Row 1 riichi on your dealership",
+            "Ippatsumo a bad shape",
+            "You donate 2+ sticks this hanchan",
+            "Exactly 8 unique terminals in haipai",
+            "Headbump (if applicable)",
+            "Kandora gives open dora 3+",
+            "2+ chiitoi backfires",
+            "You get 5-shanten haipai",
+            "Dora drop t1",
+            "Double musuji push on ippatsu",
+            "Dora push on ippatsu",
+            "Tobi before South 1",
+            "You hit yasume",
+            "Tsumogiri riichi",
+            "*Opens hand with daiminkan*",
+            "Bad wait nomi",
+            "3+ dora in haipai",
+            "You pay haneman+ kaburi",
+            "Yakitori",
+            "Lowest-rank player ends 1st",
+            "3+ sided wait doesn't win",
+            "Your mangan loses to a 1 han push",
+            "Gyakuten in all last because someone deals in",
+            "Baiman+ deal in",
+            "No punish for pushing 3 musuji into riichi",
+            "MAKA B rating or sub-75 Mortal rating (if applicable)",
+            "Opponents all have bigger wins than you"
         ];
 
         // State
@@ -1124,7 +1118,7 @@
             ctx.fillStyle = textColor;
             ctx.font = 'bold 18px DM Sans, sans-serif';
             ctx.textAlign = 'center';
-            ctx.fillText('Bad Luck Bingo', canvas.width / 2, padding + 25);
+            ctx.fillText('Riichi Bingo', canvas.width / 2, padding + 25);
             
             // Draw cells
             const cells = board.querySelectorAll('.bingo-cell');
